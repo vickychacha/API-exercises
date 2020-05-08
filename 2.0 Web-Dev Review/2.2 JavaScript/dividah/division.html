@@ -4,13 +4,16 @@
     <meta charset="utf-8">
     <title>Division Only Calculator</title>
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 
     <!-- Adding JS to our page -->
     <!-- Embedded
     Adding JS directly through the script tag
   -->
     <script type="text/javascript">
+      //alert('Niko hapa');
     </script>
     <!-- External
     Adding JS using an external script sheet through the script tag
@@ -25,12 +28,24 @@
 
   </head>
   <body>
+    <!-- We will create a simple page that allows us to divide two numbers -->
+    <!-- Let us create the markup first -->
 
-    <div class="">
+    <!-- Remember bootstrap is a "CSS framework" and much more too....-->
+    <!-- remember the grid and flexbox layout? -->
+    <!-- Bootstrap has a 12-grid system -->
+    <!-- let us add a container -->
+    <!-- There is so much in bootstrap but you can try out much more :) -->
+    <!-- finally you can put icons to your markup -->
+    <!-- let us use font-awesome :) -->
 
-      <div class="">
+    <!-- That is it for our markup -->
 
-        <div class="">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-8">
           <br>
           <!-- let us add an alert here -->
           <div class="alert alert-secondary" role="alert">
@@ -38,29 +53,34 @@
           </div>
 
           <!-- we need two form inputs -->
-          <div class="" id="num1Div">
+          <div class="form-group" id="num1Div">
             <label for="num1">First Number</label>
-            <input type="number" name="num1" id="num1" value="" class="">
-            <span style='display:none;' id="num1Error" class="text-danger"> <i class=" "></i> </span>
+            <!-- let us limit the input to numbers only-->
+            <!-- HTML 5 types -->
+            <!-- Nice...notice that we cannot even type non numerical stuff -->
+
+            <!-- except e :) because you can exponents in numbers 2e12 -->
+            <input type="number" name="num1" id="num1" value="" class="form-control">
+            <span style='display:none;' id="num1Error" class="text-danger"> <i class="fas fa-bomb"></i> </span>
           </div>
 
-          <div class="">
+          <div class="form-group">
             <label for="num2">Second Number</label>
-            <input type="number" name="num2" id="num2" value="" class="">
-            <span style='display:none;' id="num2Error" class="text-danger"> <i class=" "></i> </span>
+            <input type="number" name="num2" id="num2" value="" class="form-control">
+            <span style='display:none;' id="num2Error" class="text-danger"> <i class="fas fa-bomb"></i> </span>
           </div>
 
-          <button id="divide-them" class="" name="divide-them" type="button" name="button">
-           <i class=" "></i>  Divide Them!
+          <button id="divide-them" class="btn btn-primary" name="divide-them" type="button" name="button" onclick="divideThem()">
+           <i class="fa fa-divide"></i>  Divide Them!
           </button>
         </div>
 
-        <div class="">
-          <br>
-          <div class="" role="alert">
-           <i class=""></i>  Results
+        <div class="col-md-4">
+          <br> <!-- this is a bad way to do it --add some css :) -->
+          <div class="alert alert-success" role="alert">
+           <i class="fas fa-smile"></i>  Results
           </div>
-          <h4 class='' id="results"></h4>
+          <h4 class='text-primary' id="results"></h4>
         </div>
 
       </div>
@@ -68,10 +88,17 @@
     </div>
 
 
+    <!-- We can use bootstrap :) -->
     <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" charset="utf-8"></script>
     <!-- Font awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" charset="utf-8"></script>
 
 
+    <!-- Notice that the popup alert is now displayed after the HTML is loaded...
+    Observe carefully...
+  -->
     <script src="division.js" charset="utf-8"></script>
+    <!-- So generally we place the JS before the end of the body -->
   </body>
 </html>
