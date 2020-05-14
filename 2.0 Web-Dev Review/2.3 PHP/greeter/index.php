@@ -8,11 +8,11 @@
 
   <body>
 
-    <div class="flex mx-auto justify-center">
-      <img class="w-1/4" src="greeter.gif" alt="">
-    </div>
-
     <?php if( $_GET['greet'] == "yes"): ?>
+
+      <div class="flex mx-auto justify-center">
+        <img class="w-1/4" src="greeter.gif" alt="">
+      </div>
 
       <div class="flex mx-auto rounded w-1/4 items-center justify-center bg-blue-500 text-white text-lg text-center font-bold px-4 py-3 top-3" role="alert">
 
